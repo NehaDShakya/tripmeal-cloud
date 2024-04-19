@@ -1,0 +1,25 @@
+version: "3"
+
+# COMPLETE THIS FILE
+services:
+  web:
+    build: web
+    image: nehadshakya/tripmeal-cloud-web:1.0
+    networks:
+      - backend
+    ports:
+      - 5000
+  db:
+    build: db
+    image: nehadshakya/tripmeal-cloud-db:1.0
+    networks:
+      - backend
+    volumes:
+      - tripmeal-data:/var/lib/mysqld/data
+
+networks:
+  backend:
+
+volumes:
+  tripmeal-data:
+    
