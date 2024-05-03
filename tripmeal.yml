@@ -29,7 +29,7 @@ spec:
         service: web
     spec:
       containers:
-      - image: nehadshakya/tripmeal-cloud-web:1.0
+      - image: europe-west2-docker.pkg.dev/gq-cloud-computing/tripmeal-cloud-repo/tripmeal-cloud-app-web:latest
         name: web
         ports:
         - containerPort: 5000
@@ -80,7 +80,7 @@ spec:
         service: db
     spec:
       containers:
-      - image: nehadshakya/tripmeal-cloud-db:1.0
+      - image: europe-west2-docker.pkg.dev/gq-cloud-computing/tripmeal-cloud-repo/tripmeal-cloud-app-db:latest
         name: db
         ports:
         - containerPort: 3306
